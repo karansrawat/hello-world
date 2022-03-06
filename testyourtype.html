@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testing typing speed</title>
+    <link rel="stylesheet" href="stylesheet.css"/>
+</head>
+<body>
+<div class="top_header">
+    <p style="text-align:center; font-size:30px;">
+        SPELLING TEST <hr />
+    </p>
+</div>
+<div class="nav">
+
+</div>
+<div class="banner">
+
+</div>
+<div class="container">
+    <p style="text-align:center; font-size: 25px;">To change the overall look of your document, choose new Theme elements on the Page Layout tab. To change the looks available in the Quick Style gallery, use the Change Current Quick Style Set command. Both the Themes gallery and the Quick Styles gallery provide reset commands so that you can always restore the look of your document to the original contained in your current template.</p>
+<p id="paragraph"></p><br/><br/>
+    <p style="text-align:center;">
+        <input type="text" id="answer"><br/><br/><br/><br/>
+        <button onclick="check()"><b>SUBMIT<b/></button>
+    </p><br/><br/>
+    <h3 style="text-align:center;"><hr>MISTAKE COUNT</h3><hr><br/><h4 style="text-align:center">MISTAKES IN PARAGRAPH</h4><br/><br/><br/><br/>
+    <p  style="text-align:center;" id="result"></p><hr/><br/><br/><br/><br/>
+    <script>
+    function check() {
+    var str = "To change the overall look of your document, choose new Theme elements on the Page Layout tab. To change the looks available in the Quick Style gallery, use the Change Current Quick Style Set command. Both the Themes gallery and the Quick Styles gallery provide reset commands so that you can always restore the look of your document to the original contained in your current template.";
+    var typed = document.getElementById('answer').value;
+    let size = str.length;
+    let size_of_type = typed.length;
+    let count = 0;
+    for(let i=0;i<size;i++)
+    {
+    for(let j=i;j<size;j++)
+    {
+    if(str[i]==typed[j]) {
+    break;
+    } else {
+    count++;
+    break;
+    }
+    }
+    }
+    if(typed==0) {
+    alert("Please enter the text first.");
+    } else {
+    document.getElementById('result').innerHTML = count;
+    }
+    }
+    </script>
+
+</div>
+<div class="footer">
+<p style="text-align:center;">
+    PRACTICE MAKE'S A MAN PERFECT<br/>
+    <cites>.....Shri Abdul Kalam</cites>
+</p>
+</div>
+
+</body>
+</html>
